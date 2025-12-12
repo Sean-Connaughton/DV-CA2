@@ -10,12 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body id="body" class="text-dark bg-dark">
-    <header>
+<body id="body" class="text-dark bg-body">
+    <header class="sticky-top">
         <!-- navbar -->
         <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-secondary-subtle">
             <div class="container">
-                <a class="navbar-brand" href="#hero">Digital Portfolio</a>
+                <a class="navbar-brand" href="#">Digital Portfolio</a>
 
                 <div class="navbar-text">
                     <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
@@ -49,7 +49,8 @@
         </nav>
     </header>
 
-    <div id="mainContainer" class="container-fluid bg-body">
+    <!-- main -->
+    <div id="mainContainer" class="container-fluid">
         <div class="container">
             
             <!-- hero -->
@@ -71,84 +72,324 @@
                 </div>
             </section>
 
-            <article id="articleContainer" class="container my-layout">
+            <!-- flex layout -->
+            <article id="articleContainer" class="container-fluid my-layout">
 
                 <!-- about -->
                 <section id="about" class="my-layout-item">
-                    <h2>About Me</h2>
-                    <div>
-                        <p>I am a computing student at TU Dublin Tallaght in the software development stream.</p>
-                        <figure><img class="img-fluid" src="images/Assateague_fg02.jpg" alt="two horses standing in waterlogged grass next to a lake"/></figure>
+                    <a class="navbar-brand" href="#about"><h3>About Me</h3></a>
+                    <div class="card bg-body border-light mt-2 text-dark">
+                        <div class="card-body">
+                            <p class="card-text">
+                                I am a computing student at TU Dublin Tallaght in the software development stream.
+                                My main areas of expertise are software architecture and web development.                               
+                            </p>
+                        </div>
                     </div>
                 </section>
 
                 <!-- education-->
                 <section id="education" class="my-layout-item">
-                    <h2>Education</h2>
-                    <div>
-                        <p>I am educated</p>
+                    <!-- navbar -->
+                    <nav id="educationNavbar" class="navbar navbar-light p-2">
+                        <a class="navbar-brand" href="#education"><h3>Education</h3></a>                   
+                        <ul class="nav nav-pills">
+                            <li class="nav-item me-1"><a class="nav-link" href="#scrollSpyHeadingYear3">Year 3</a></li>
+                            <li class="nav-item me-1"><a class="nav-link" href="#scrollSpyHeadingYear2">Year 2</a></li>
+                            <li class="nav-item me-1"><a class="nav-link" href="#scrollSpyHeadingYear1">Year 1</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- list group -->
+                    <div class="scrollable-y p-2" data-bs-spy="scroll" data-bs-target="#educationNavbar" data-bs-smooth-scroll="true" tabindex="0">
+                        <em>2022 - to-date. BSc in Computing with Software Development	
+                        Technological University Dublin Tallaght Campus</em>
+
+                        <!-- Year 3 -->
+                        <h3 id="scrollSpyHeadingYear3" class="mt-2">3rd Year Modules studied - 3.38 GPA:</h3>
+                        <div class="p-2">
+                            <ul class="list-group"><h5>Semester 1</h5>  
+                                <li class="list-group-item my-list-group-item-light">Server-side Web Development (B)</li>
+                                <li class="list-group-item my-list-group-item-light">Operating Systems (B+)</li>
+                                <li class="list-group-item my-list-group-item-light">Innovation & Entrepreneurshp (B-)</li>
+                                <li class="list-group-item my-list-group-item-light">Cloud Services & Distributed Computing (B+)</li>
+                                <li class="list-group-item my-list-group-item-light">Big Data Technologies (B+)</li>
+                                <li class="list-group-item my-list-group-item-light">Data Structures & Algorithms (A)</li>
+                            </ul>
+
+                            <ul class="list-group mt-2"><h5>Semester 2</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item my-list-group-item-light">Experiential Learning Work Placement @ IBM</li>
+                                </ul>
+                            </ul>
+                        </div>
+
+                        <!-- Year 2 -->
+                        <h3 id="scrollSpyHeadingYear2" class="mt-2">2nd Year Modules studied - 4.00 GPA:</h3>
+                        <div class="p-2"> 
+                            <ul class="list-group"><h5>Semester 1</h5>  
+                                <li class="list-group-item my-list-group-item-light">Software Development 3 (A)</li>
+                                <li class="list-group-item my-list-group-item-light">Software Quality Assurance and Testing (A)</li>
+                                <li class="list-group-item my-list-group-item-light">Advanced Database Technologies (A)</li>
+                                <li class="list-group-item my-list-group-item-light">Network Fundamentals (A)</li>
+                                <li class="list-group-item my-list-group-item-light">Client-Side Web Development (A)</li>
+                                <li class="list-group-item my-list-group-item-light">Discrete Mathematics 2 (A)</li>
+                            </ul>
+
+                            <ul class="list-group mt-2"><h5>Semester 2</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item my-list-group-item-light">Software Development 4 (A)</li>
+                                    <li class="list-group-item my-list-group-item-light">Project (A)</li>
+                                    <li class="list-group-item my-list-group-item-light">Data Administration and Analysis (A)</li>
+                                    <li class="list-group-item my-list-group-item-light">Routing & Switching Essentials(A)</li>
+                                    <li class="list-group-item my-list-group-item-light">Information Security (A)</li>
+                                    <li class="list-group-item my-list-group-item-light">Management Science (A)</li>
+                                </ul>
+                            </ul>
+                        </div>
+
+                        <!-- Year 1 -->
+                        <h3 id="scrollSpyHeadingYear1" class="mt-2">1st Year Modules studied - 3.83 GPA:</h3>
+                        <div class="p-2">
+                            <ul class="list-group"><h5>Semester 1</h5>  
+                                <li class="list-group-item my-list-group-item-light">Discrete Mathematics 1 (A)</li>
+                                <li class="list-group-item my-list-group-item-light">Software Development 1 (A)</li>
+                                <li class="list-group-item my-list-group-item-light">Visual Design and Used Experience (B+)</li>
+                                <li class="list-group-item my-list-group-item-light">Computer Architecture (A)</li>
+                                <li class="list-group-item my-list-group-item-light">Business & Information Systems (B+)</li>
+                                <li class="list-group-item my-list-group-item-light">Critical Skills Development (A)</li>
+                            </ul>
+
+                            <ul class="list-group mt-2"><h5>Semester 2</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item my-list-group-item-light">Systems Analysis (A)</li>
+                                    <li class="list-group-item my-list-group-item-light">Statistics (A)</li>
+                                    <li class="list-group-item my-list-group-item-light">Operating System Fundamentals (A)</li>
+                                    <li class="list-group-item my-list-group-item-light">Software Development 2 (A)</li>
+                                    <li class="list-group-item my-list-group-item-light">Social Media Communications (B+)</li>
+                                    <li class="list-group-item my-list-group-item-light">Database Fundamentals (B+)</li>
+                                </ul>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
                 <!-- projects -->
                 <section id="projects" class="my-layout-item">
-                    <h2>Projects</h2>
-                    <div>
-                        <ol>
-                            <li>2nd Year E-commerce app
+
+                    <!-- navbar -->
+                    <nav id="projectsNavbar" class="navbar navbar-light p-2">
+                        <a class="navbar-brand" href="#projects"><h3>Projects</h3></a>                   
+                        <ul class="nav nav-pills">
+                            <li class="nav-item me-1"><a class="nav-link" href="#scrollSpyHeadingProject1">Ecommerce Platform</a></li>
+                            <li class="nav-item me-1"><a class="nav-link" href="#scrollSpyHeadingProject2">Ant2Maven</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="container-fluid scrollable-y p-2" data-bs-spy="scroll" data-bs-target="#projectsNavbar" data-bs-smooth-scroll="true" tabindex="0">
+
+                        <h1 id="scrollSpyHeadingProject1"></h1>
+                        <div class="card bg-body border-light text-dark">
+
+                            <div class="card-header mt-2">
+                                <h5>Ecommerce Platform</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Year 2 Project</h5>
+                                
+                                <p class="card-text">
+                                    Team project involving the development of an ecommerce website using the Django framework. 
+                                    Multiple functionalities for both administrative and customer applications. 
+                                    Features include database CRUD functionality, shopping cart, stripe integration, 2FA, product comparison charts and an advanced search system.
+                                </p>
+
+                                <h6 class="mt-2 mb-2 text-dark">Challenges Faced:</h6>
                                 <ul>
-                                    <li>Django Framework</li>
-                                    <li>CRUD Functionality</li>
-                                    <li>User authentication</li>
-                                    <li>Database models</li>
+                                    <li>Creating the database models for many different types of product</li>
+                                    <li>Implementing 2FA, advanced search and product comparison</li>
                                 </ul>
-                            </li>
-                            <li>IBM Ant2Maven Conversion Tool
+
+                                <h6 class="card-subtitle mt-2 mb-2 text-dark">Technologies & Tools Used:</h6>
                                 <ul>
-                                    <li>Learn Ant and Maven</li>
-                                    <li>Find out how ant tasks correspond to maven plugins</li>
-                                    <li>Get project dependencies, create list</li>
-                                    <li>Get project information</li>
-                                    <li>Convert ant build.xml and apache ivy ivy.xml to maven pom.xml</li>
+                                    <li>Django framework</li>
+                                    <li>Python</li>
+                                    <li>SQLite</li>
+                                    <li>Javascript</li>
+                                    <li>HTML5</li>
+                                    <li>CSS</li>
+                                    <li>HTTP</li>
+                                    <li>JS Fetch API</li>
                                 </ul>
-                            </li>
-                        </ol>
+                            </div>
+                        </div>
+
+                        <h1 id="scrollSpyHeadingProject2"></h1>
+                        <div class="card bg-body border-light mt-2 text-dark">
+                            <div class="card-header mt-2">
+                                <h5>IBM Ant2Maven Conversion Tool</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Internship Project</h5>
+                                
+                                <p class="card-text">
+                                    Team project involving the development of a tool to convert Apache Ant+Ivy projects to Apache Maven. 
+                                    Functionalities included converting dependencies and environment variables and plugin suggestions based on your Ant tasks.
+                                </p>
+
+                                <h6 class="mt-2 mb-2 text-dark">Challenges Faced:</h6>
+                                <ul>
+                                    <li>Finding out how an Ant build.xml corresponds to a Maven pom.xml</li>
+                                    <li>Getting the correct dependency information from the Ant project's classpath</li>
+                                    <li>Finding the corresponding Maven artifact for each dependency</li>
+                                </ul>
+
+                                <h6 class="card-subtitle mt-2 mb-2 text-dark">Technologies & Tools Used:</h6>
+                                <div>
+                                    <ul>
+                                        <li>HTTP</li>
+                                        <li>Java</li>
+                                        <li>Apache Maven</li>
+                                        <li>Apache Ant</li>
+                                        <li>Apache Ivy</li>
+                                        <li>XML</li>
+                                        <li>Json</li>
+                                        <li>Google Gson</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
                 <!-- experience -->
                 <section id="experience" class="my-layout-item">
-                    <h2>Work Experience</h2>
-                    <div>
-                        <h4>IBM Work Placement</h4>
-                        <p>6-month work experience placement at IBM Technology Campus in Damastown</p>
-                        <ul>Duties included:
-                            <li>Developing software</li>
-                            <li>Utilising build systems effectively (Maven)</li>
-                            <li>Writing unit tests to ensure code robustness</li>
-                            <li>Working as a team with fellow interns</li>
-                            <li>Attending meetings and company events</li>
-                        </ul>
+
+                    <a class="navbar-brand" href="#experience"><h3>Work Experience</h3></a>
+
+                    <div class="card bg-body border-light mt-2 text-dark">
+                        <div class="card-header mt-2">
+                            <h5>February 2025 - August 2025</h5>
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">IBM Ireland - Software Development Intern</h4>
+                            
+                            <p class="card-text">
+                               6-month work experience placement at IBM Technology Campus in Damastown
+                            </p>
+
+                            <h6 class="mt-2 mb-2">Duties included:</h6>
+                            <ul>
+                                <li>Developing software to address customer business requirements</li>
+                                <li>Utilising enterprise development tools to automate testing and integration</li>
+                                <li>Writing unit tests to ensure code robustness</li>
+                                <li>Working as a team with fellow interns</li>
+                                <li>Attending meetings and company events</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </section>
 
                 <!-- skills -->
                 <section id="skills" class="my-layout-item">
-                    <h2>Skills</h2>
-                    <div>
-                        Programming
+
+                    <a class="navbar-brand" href="#skills"><h3>Skills</h3></a>
+
+                    <div class="card bg-body border-dark mt-2 text-dark">
+                        <div class="card-body">
+                            <h4>Soft Skills:</h4>
+                            <ul>
+                                <li>Good at logical thinking and problem solving</li>
+                                <li>Works effectively in a team environment</li>
+                                <li>Passion for learning new skills</li>
+                            </ul>
+
+                            <h4 class="mt-2">Technical Skills:</h4>
+                            <ul>
+                                <li>Capable developer experienced with the Django framework, Python, Java and JavaScript</li>
+                                <li>Has used container technologies such as Docker</li>
+                                <li>Has used cloud environments like Microsoft Azure and Google Cloud</li>
+                                <li>Competent at writing unit tests using frameworks like Python's unittest</li>
+                                <li>Good knowledge of DevOps CI/CD practices</li>
+                                <li>Good understanding of object-oriented design/programming</li>
+                                <li>Knowledge of security principles including encryption and web security</li>
+                                <li>Basic knowledge of computer architecture</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </section>
 
                 <!-- hobbies -->
                 <section id="hobbies" class="my-layout-item">
-                    <h2>Hobbies</h2>
-                    <div>
-                        <ul>
-                            <li>Video Games - Dark Souls, S.T.A.L.K.E.R</li>
-                            <li>Music - Steely Dan, Pink Floyd</li>
-                        </ul>
+                    <a class="navbar-brand" href="#hobbies"><h3>Hobbies and Interests</h3></a>
+                    <div class="d-flex flex-row justify-content-around">
+
+                        <div class="card-group">
+                            <div class="card bg-body border-light mt-2 p-2 text-dark">
+
+                                <img class="card-img-top" src="images/darksoulscover.jpg" alt="Cover of the 2011 video game 'Dark Souls'">
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Video Games</h4>
+
+                                    <ul class="card-text">
+                                        <li>Dark Souls</li>
+                                        <li>S.T.A.L.K.E.R</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card bg-body border-light mt-2 p-2 text-dark">
+                                
+                                <img class="card-img-top" src="images/ajacover.png" alt="Cover of the 1977 album 'Aja' by Steely Dan">                          
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Music</h4>
+
+                                    <ul class="card-text">
+                                        <li>Steely Dan</li>
+                                        <li>Pink Floyd</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card bg-body border-light mt-2 p-2 text-dark">
+                                
+                                <img class="card-img-top" src="images/libertieswhiskey.jpg" alt="Photo of a bottle of whiskey">
+                    
+                                <div class="card-body">
+                                    <h4 class="card-title">Beverages</h4>
+
+                                    <ul class="card-text">
+                                        <li>Whiskey</li>
+                                        <li>Teas and Herbal Infusions</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card bg-body border-light mt-2 p-2 text-dark">
+
+                                <img class="card-img-top" src="images/bike.jpg" alt="Photo of a black stepover bicycle">
+                          
+                                <div class="card-body">
+                                    <h4 class="card-title">Sports</h4>
+
+                                    <ul class="card-text">
+                                        <li>Cycling</li>
+                                        <li>Walking</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
+
                 </section>
 
             </article>
@@ -162,12 +403,13 @@
             <div id="contactModalContent" class="modal-content bg-body-tertiary">
 
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="contactModalLabel">Contact</h1>
+                    <h1 class="modal-title fs-5 text-dark" id="contactModalLabel">Contact</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
                 <div class="modal-body">
-                    <a href="https://github.com/Sean-Connaughton">GitHub</a>
+                    <a class="btn btn-primary btn-sm" href="https://github.com/Sean-Connaughton">GitHub</a>
+                    <a class="btn btn-primary btn-sm" href="mailto:X00199342@mytudublin.ie">Email</a>    
                 </div>
 
                 <div class="modal-footer">
