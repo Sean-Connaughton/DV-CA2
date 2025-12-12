@@ -3,17 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Sean Connaughton - Digital Portfolio</title>
     <!-- my stylesheet -->
     <link rel="stylesheet" href="style.css">
     <!-- bootstrap stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
+
+<body id="body" class="text-dark bg-dark">
     <header>
-        <h1>Sean Connaughton</h1>
+        <!-- navbar -->
+        <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-secondary-subtle">
+            <div class="container">
+                <a class="navbar-brand" href="#hero">Digital Portfolio</a>
+
+                <div class="navbar-text">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                        Contact me
+                    </button>
+
+                    <button id="changeColourModeButton" type="button" class="btn btn-sm btn-dark">
+                        <span id="colourModeButtonIcon"> Dark Mode
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div id="navMenu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>         
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
+    <div id="mainContainer" class="container-fluid bg-body">
+        <div class="container">
+            
+            <!-- hero -->
+            <section id="hero" class="mb-2">
+                <div class="d-flex flex-row justify-content-between">
+
+                    <div>
+                        <h1>Sean Connaughton</h1>
+                        <h4>4th Year Computing Student - Software Development</h4>
+                        <p>Here you can find out information about me.</p>
+                    </div>
+
+                    <div class="mt-2">
+                        <div>
+                            <img class="my-image rounded ms-2" src="https://avatars.githubusercontent.com/u/145445413?v=4" alt="Portrait of a brown horse with a white stripe on its head standing in a field">                            
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <article id="articleContainer" class="container my-layout">
+
+                <!-- about -->
+                <section id="about" class="my-layout-item">
+                    <h2>About Me</h2>
+                    <div>
+                        <p>I am a computing student at TU Dublin Tallaght in the software development stream.</p>
+                        <figure><img class="img-fluid" src="images/Assateague_fg02.jpg" alt="two horses standing in waterlogged grass next to a lake"/></figure>
+                    </div>
+                </section>
+
+                <!-- education-->
+                <section id="education" class="my-layout-item">
+                    <h2>Education</h2>
+                    <div>
+                        <p>I am educated</p>
+                    </div>
+                </section>
+
+                <!-- projects -->
+                <section id="projects" class="my-layout-item">
+                    <h2>Projects</h2>
+                    <div>
+                        <ol>
+                            <li>2nd Year E-commerce app
+                                <ul>
+                                    <li>Django Framework</li>
+                                    <li>CRUD Functionality</li>
+                                    <li>User authentication</li>
+                                    <li>Database models</li>
+                                </ul>
+                            </li>
+                            <li>IBM Ant2Maven Conversion Tool
+                                <ul>
+                                    <li>Learn Ant and Maven</li>
+                                    <li>Find out how ant tasks correspond to maven plugins</li>
+                                    <li>Get project dependencies, create list</li>
+                                    <li>Get project information</li>
+                                    <li>Convert ant build.xml and apache ivy ivy.xml to maven pom.xml</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- experience -->
+                <section id="experience" class="my-layout-item">
+                    <h2>Work Experience</h2>
+                    <div>
+                        <h4>IBM Work Placement</h4>
+                        <p>6-month work experience placement at IBM Technology Campus in Damastown</p>
+                        <ul>Duties included:
+                            <li>Developing software</li>
+                            <li>Utilising build systems effectively (Maven)</li>
+                            <li>Writing unit tests to ensure code robustness</li>
+                            <li>Working as a team with fellow interns</li>
+                            <li>Attending meetings and company events</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- skills -->
+                <section id="skills" class="my-layout-item">
+                    <h2>Skills</h2>
+                    <div>
+                        Programming
+                    </div>
+                </section>
+
+                <!-- hobbies -->
+                <section id="hobbies" class="my-layout-item">
+                    <h2>Hobbies</h2>
+                    <div>
+                        <ul>
+                            <li>Video Games - Dark Souls, S.T.A.L.K.E.R</li>
+                            <li>Music - Steely Dan, Pink Floyd</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </article>
+
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div id="contactModalContent" class="modal-content bg-body-tertiary">
+
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="contactModalLabel">Contact</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <a href="https://github.com/Sean-Connaughton">GitHub</a>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">I look forward to your correspondence.</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
     <!-- my script -->
     <script src="script.js"></script>
